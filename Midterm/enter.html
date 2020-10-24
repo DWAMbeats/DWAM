@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWAM Music Festival</title>
+    <link rel="icon" type="image/ico" href="css/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            cursor: url(css/favicon.ico), auto;
+            font-family: 'Oswald', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+        }
+        #logo img{
+            display: none;
+        }
+
+        a{
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            color: #29e7cef3;
+            position: absolute;
+            margin-top: 20%;
+            margin-left: 10%;
+            -webkit-font-smoothing: antialiased;
+            background-color:rgba(0, 0, 0, 0.247);
+            font-size: 20px;
+            width: fit-content;
+            display: block;
+            cursor: pointer;
+        }
+        a img{
+            width: 50%;
+        }
+        a:hover{
+            opacity: .8;
+            transform: scale(1.1);
+        }
+        a:active{
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="images/DWAM-fest-main.png" id="logo" alt="Logo" />
+    <a href="index.html"><img src="https://fontmeme.com/permalink/201024/c601435555d954b1013a502eb3012f61.png" alt="raindrop-splash-font" border="0"></a>
+
+    <script src="https://nextparticle.nextco.de/nextparticle.min.js"></script>
+    <script>
+        nextParticle = new NextParticle({
+            image: document.all.logo,
+            width: window.innerWidth,
+            height: window.innerHeight,
+            maxWidth: window.innerWidth * 1.2,
+            particleGap: 2,
+        });
+        window.onresize = function () {
+            if (window.innerWidth > 600) {
+                nextParticle.width = window.innerWidth - 20;
+                nextParticle.height = window.innerHeight - 20;
+                nextParticle.start();
+            }
+        };
+    </script>
+</body>
+
+</html>
